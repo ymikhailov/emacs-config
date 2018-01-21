@@ -31,6 +31,10 @@
 
 (setq-default c-basic-offset 4)
 
+; open .h files in C++ mode
+
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
 ; scrolling
 
 (global-set-key [M-up]   (lambda () (interactive) (scroll-down 1)))
