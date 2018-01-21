@@ -42,9 +42,19 @@
 
 ; font
 
-(set-frame-font "ubuntu mono 14")
+(when (eq system-type 'gnu/linux)
+  (set-frame-font "ubuntu mono 14"))
+
+(when (eq system-type 'darwin)
+  (set-frame-font "menlo 16"))
 
 ; color theme
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'zenburn t)
+
+; mac specific settings
+
+(when (eq system-type 'darwin)
+  (setq mac-option-modifier 'super)
+  (setq mac-command-modifier 'meta))
