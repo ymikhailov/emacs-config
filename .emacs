@@ -44,6 +44,11 @@
 
 (global-set-key "\C-x\C-b" 'buffer-menu)
 
+; bind undo to C-z
+
+(global-unset-key "\C-z")
+(global-set-key "\C-z" 'advertised-undo)
+
 ; font
 
 (when (eq system-type 'gnu/linux)
