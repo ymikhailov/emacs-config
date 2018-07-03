@@ -10,6 +10,10 @@
 (tool-bar-mode   -1)
 (scroll-bar-mode -1)
 
+; revert all buffers periodically
+
+(global-auto-revert-mode t)
+
 ; disable auto save and backups
 
 (setq auto-save-mode    nil)
