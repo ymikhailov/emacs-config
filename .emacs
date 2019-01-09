@@ -53,10 +53,13 @@
 
 (global-set-key "\C-x\C-b" 'buffer-menu)
 
-; bind undo to C-z
+; bind undo to C-z (M-z for mac)
 
-(global-unset-key "\C-z")
-(global-set-key "\C-z" 'advertised-undo)
+(when (eq system-type 'gnu/linux)
+  (global-set-key "\C-z" 'undo))
+
+(when (eq system-type 'darwin)
+  (global-set-key "\M-z" 'undo))
 
 ; font
 
