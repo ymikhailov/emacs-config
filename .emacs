@@ -56,7 +56,7 @@
 ; font
 
 (when (eq system-type 'gnu/linux)
-  (set-frame-font "ubuntu mono 14"))
+  (set-frame-font "monospace 12"))
 
 (when (eq system-type 'darwin)
   (set-frame-font "menlo 16"))
