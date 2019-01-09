@@ -44,6 +44,11 @@
 (global-set-key [M-up]   (lambda () (interactive) (scroll-down 1)))
 (global-set-key [M-down] (lambda () (interactive) (scroll-up   1)))
 
+; move to beginning/end of line
+
+(global-set-key [M-left]  'move-beginning-of-line)
+(global-set-key [M-right] 'move-end-of-line)
+
 ; open buffer-menu instead of list-buffers
 
 (global-set-key "\C-x\C-b" 'buffer-menu)
