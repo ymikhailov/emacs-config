@@ -23,6 +23,10 @@
 
 (setq-default truncate-lines t)
 
+; remove trailing whitespace
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ; indent with spaces instead of tabs
 
 (setq-default indent-tabs-mode nil)
